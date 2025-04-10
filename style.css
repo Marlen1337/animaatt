@@ -1,0 +1,104 @@
+body{
+    font-family:  Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightslategrey;
+}
+header{
+    background-color: green;
+    color: crimson;
+    padding: 45px 0deg;
+
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a{
+    color: green;
+    text-decoration: center;
+    font-size: 25px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 65px;
+    max-width: 550px;
+    margin: 0;
+}
+selection{
+    margin-bottom: 20px;
+}
+.animation-container {
+    display: flex  ;
+    gap:35px;   
+}
+.box{
+    width: 95px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: darkolivegreen;
+    font-size: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+40% {
+    transform: translateY(-100px);
+}
+60% {
+    transform: translateY(-35px);
+}
+}
+
+.fade {
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0%{ opacity: 1;}
+    50%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+.slide {
+    animation: slide 4s infinite;
+}
+@keyframes slide{
+    0% { transform: translateX(0);}
+    50% { transform: translateX(200px);}
+    100% { transform: translateX(0);}
+}
+footer {
+    background-color: burlywood;
+    color: gray;
+    text-align: center;
+    padding: 10px 0deg;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media(max-width:600px){
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.animation-container{
+    flex-direction: column;
+    align-items: center;
+}
